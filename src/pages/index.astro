@@ -5,19 +5,11 @@ import exImg from "/images/mock/jwp_mock_01.png";
 import exImg2 from "/images/mock/jwp_mock_02.png";
 import exImg3 from "/images/mock/jwp_mock_03.png";
 
-const imgWidth = 200;
+const divBy = 4;
 ---
 
 <Layout title="initial page">
   <h1>JW Pippen Gallery Test</h1>
-  <!-- <h2>{data[2].fileName}</h2> -->
-
-  <!-- {
-    data.map(function (val) {
-      return <h2>{val.fileName}</h2>;
-    })
-  } -->
-
   <div id="app" class="gallery">
     <div class="pswp-gallery" id="my-gallery">
       {
@@ -32,8 +24,8 @@ const imgWidth = 200;
             >
               <img
                 src={`.././images/mock/${imgObj.fileName}`}
-                width={imgWidth}
-                height={imgWidth}
+                width={imgObj.width / divBy}
+                height={imgObj.height / divBy}
                 alt=""
               />
             </a>
