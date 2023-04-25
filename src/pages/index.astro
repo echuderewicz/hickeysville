@@ -2,14 +2,14 @@
 import rawData from "../js/load.js";
 import Layout from "../layouts/Layout.astro";
 
-let data = rawData.slice(2, 8);
+// let data = rawData.slice(2, 8);
+let data = rawData;
 
 const divBy = 5.5;
 ---
 
 <Layout title="initial page">
-  <h1>Kawkslapper Productions Presents:</h1>
-  <h2>JW Pippen Gallery Test</h2>
+  <h1>JW Pippen Gallery Test</h1>
   <div id="app" class="gallery">
     <div class="pswp-gallery" id="my-gallery">
       {
