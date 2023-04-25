@@ -1,8 +1,10 @@
 ---
-import data from "../js/load.js";
+import rawData from "../js/load.js";
 import Layout from "../layouts/Layout.astro";
 
-const divBy = 4;
+let data = rawData.slice(2, 8);
+
+const divBy = 5.5;
 ---
 
 <Layout title="initial page">
@@ -34,6 +36,10 @@ const divBy = 4;
 </Layout>
 
 <style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
   h1 {
     background-color: red;
     color: white;

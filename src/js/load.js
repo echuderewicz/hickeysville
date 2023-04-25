@@ -3,7 +3,7 @@ import path from "path";
 import { PNG } from "pngjs";
 
 const dir_read = "./public/images/mock";
-// const dir_write = "./src/data";
+
 const pngFiles = fs.readdirSync(dir_read).filter((filename) => {
   return path.extname(filename).toLowerCase() === ".png";
 });
@@ -21,11 +21,5 @@ pngFiles.forEach((fileName) => {
   };
   metadataCollection.push(metadata);
 });
-
-// const jsonMetadataCollection = JSON.stringify(metadataCollection);
-// const outputFile = path.join(dir_write, "pngProjImages.json");
-// fs.writeFileSync(outputFile, jsonMetadataCollection);
-
-// console.log(metadataCollection);
 
 export default metadataCollection;
